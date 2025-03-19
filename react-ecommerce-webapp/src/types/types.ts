@@ -10,8 +10,7 @@ export interface Product {
         count: number;
     };
     createdAt?: Date;
-    updatedAt?: Date;
-    quantity?: number;    
+    updatedAt?: Date;    
 };
 
 export type Category = string;

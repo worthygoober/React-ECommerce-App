@@ -1,6 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Home from './pages/Home/Home';
-import Profile from "./pages/Profile/Profile";
+import Cart from "./pages/Cart/Cart";
+import { FaShoppingCart } from "react-icons/fa";
 
 function App() {
   
@@ -8,9 +9,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
+          <Link to='/'>Homepage</Link>
+          <Link to='/cart'>
+            <FaShoppingCart />
+          </Link>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/profile' element={<Profile />} />
+            <Route path='/cart' element={<Cart />} />
           </Routes>
         </BrowserRouter>
     </>
